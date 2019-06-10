@@ -26,12 +26,6 @@ home = (req, res) => {
 
 };
 
-// unirest.get("https://investors-exchange-iex-trading.p.rapidapi.com/stock/amzn/chart/1m")
-// .header("X-RapidAPI-Host", "investors-exchange-iex-trading.p.rapidapi.com")
-// .header("X-RapidAPI-Key", "629fd703d6mshda107f06ff48df7p16c6b0jsn450ce46ae36c")
-// .end(function (result) {
-//   console.log(result.status, result.headers, result.body);
-// });
 
 chart = (req, res) => {
     let body = req.body;
@@ -55,18 +49,7 @@ chart = (req, res) => {
         }
         return _response(res, true, null, "Error Fetching stock ticker prices")
 
-    })
-
-    // return unirest.get(uri)
-    // .header("X-RapidAPI-Host", "investors-exchange-iex-trading.p.rapidapi.com")
-    // .header("X-RapidAPI-Key", "629fd703d6mshda107f06ff48df7p16c6b0jsn450ce46ae36c")
-    // .end(function (result) {
-    // console.log(result.status);
-    // if(result.status !== 200){
-    //     return _response(res, true, null, result.body)
-    // }
-    // return _response(res, false, {data: result.body}, 'Successfully fetched stok ticker price')
-    // });
+    });
 }
 
 function _response(res, error, data, message){
